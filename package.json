@@ -4,7 +4,8 @@
   "description": "A minimal API to extract info from Egyptian ID number.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/aligredo/egyid-info-extractor/issues"
   },
-  "homepage": "https://github.com/aligredo/egyid-info-extractor#readme"
+  "homepage": "https://github.com/aligredo/egyid-info-extractor#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
