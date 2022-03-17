@@ -21,17 +21,17 @@ A minimal API to extract info from Egyptian ID number.
    
    **Required:**
  
-   requires URL query: `?id_number`
+   requires URL query param: `?id_number`
    
  * **Success Response:**
 
-  * **Code:** 200 SUCCESS <br />
-    **Content:** `{ error : null, message : "ID Number Validity Was Checked Successfully.", data : {isValid : boolean} }`
+      * **Code:** 200 SUCCESS <br />
+         **Content:** `{ error : null, message : "ID Number Validity Was Checked Successfully.", data : {isValid : boolean} }`
     
  * **Error Response:**
 
-  * **Code:** 422 UNPROCESSABLE ENTITY <br />
-    **Content:** `{ error : null, message : "id_number (String) Is A Required Parameter.", data : null }`
+      * **Code:** 422 UNPROCESSABLE ENTITY <br />
+         **Content:** `{ error : null, message : "id_number (String) Is A Required Parameter.", data : null }`
     
  ### Extract Info From Id
 ----
@@ -49,20 +49,19 @@ A minimal API to extract info from Egyptian ID number.
 
    **Required:**
  
-   requires URL query: `?id_number`
+   requires URL query param: `?id_number`
    
  * **Success Response:**
-
-  * **Code:** 200 SUCCESS <br />
-    **Content:** `{ error : null, message : "ID Number Validity Was Checked Successfully.", data : {"Birthdate" : String, "Birth Governorate" : String,
-    "Gender" : String, "Check Digit": String}`
+      * **Code:** 200 SUCCESS <br />
+         **Content:** `{ error : null, message : "ID Number Validity Was Checked Successfully.", data : {"Birthdate" : String, "Birth Governorate" : String,
+         "Gender" : String, "Check Digit": String}`
     
  * **Error Response:**
 
-  * **Code:** 422 UNPROCESSABLE ENTITY <br />
-    **Content:** `{ error : null, message : "id_number (String) Is A Required Parameter.", data : null }`
-  * **Code:** 422 UNPROCESSABLE ENTITY <br />
-    **Content:** `{ error : null, message : "Invalid ID Number.", data : null }`
+      * **Code:** 422 UNPROCESSABLE ENTITY <br />
+         **Content:** `{ error : null, message : "id_number (String) Is A Required Parameter.", data : null }`
+      * **Code:** 422 UNPROCESSABLE ENTITY <br />
+         **Content:** `{ error : null, message : "Invalid ID Number.", data : null }`
  
  
 ## Installation
