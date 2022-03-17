@@ -1,11 +1,11 @@
 'use strict';
 module.exports = function(app) {
-  var egyIDController = require('../controllers/egyIDController');
+  var EgyIDController = require('../controllers/EgyIDController');
 
   // App Routes
   app.route('/api/is-valid-id-number/')
-    .get(egyIDController.isValidIDNumber);
+    .get(EgyIDController.isValidIDNumber);
 
   app.route('/api/extract-info-from-id/')
-    .get(egyIDController.extractInfoFromIDNumber);
+    .get(EgyIDController.extractInfoFromIDNumber);
 };
