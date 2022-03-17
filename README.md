@@ -36,7 +36,7 @@ should result in the following response:
   "error": null,
   "message": "ID Number Validity Was Checked Successfully.",
   "data": {
-    "isValid": "false"
+    "isValid": "true"
   }
 }
 ```
