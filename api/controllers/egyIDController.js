@@ -128,9 +128,9 @@ var getSerial = function (id_number){
 // A Function To Extract Gender From A Given Id Number
 var getGender = function (id_number){
     if(parseInt(id_number.substring(12,13)) % 2 == 0)
-        return "female";
+        return "Female";
     else
-        return "male";
+        return "Male";
 };
 
 // A Function To Extract Check Digit From A Given Id Number
