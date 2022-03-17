@@ -14,4 +14,4 @@ routes(app);
   
 app.listen(port);
 
-console.log('EgyID Info Extractor Started On Port: ' + port);
+console.log('egyid-info-extractor Info Extractor Started On Port: ' + port);
