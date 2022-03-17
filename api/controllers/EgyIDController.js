@@ -65,7 +65,7 @@ module.exports.extractInfoFromIDNumber = function(req, res){
 // A Function To Check The Validity Of A Given Id Number
 var isValid = function(id_number){
     var today = moment();
-    return ID_NUMBER_REGEX.test(id_number) && (today.diff(getBirthdate(id_number), 'days') > 0);
+    return id_number.length == 14 && ID_NUMBER_REGEX.test(id_number) && getBirthdate(id_number).isValid() &&(today.diff(getBirthdate(id_number), 'days') > 0);
 }
 // A Function To Extract Info From A Given Id Number
 var getInfo = function (id_number){
