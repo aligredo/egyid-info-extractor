@@ -3,12 +3,68 @@ A minimal API to extract info from Egyptian ID number.
 
 ## API Endpoints 
 
-* [/api/is-valid-id-number/]() ___requires URL query "?id_number"___.
-  - Checks if the given national ID number is valid or not. 
+### Check Valid National ID
+----
+   - Checks if the given national ID number is valid or not. 
   - __(Notice that a given ID is consider invalid if its date is invalid; i.e a day that doesn't exist like 29/02/2021 or a day that has not come yet like 03/08/3030 even if the given ID matches the format)__.
 
-* [/api/extract-info-from-id/]() ___requires URL query "?id_number"___.
-  - Extracts all Info (Birthdate, Birth Governerate, Gender, Serial, Check Digit) from a given valid national ID.
+* **URL**
+
+  - [/api/is-valid-id-number/]()
+
+* **Method:**
+  
+
+  `GET`
+  
+*  **URL Params**
+   
+   **Required:**
+ 
+   requires URL query: `?id_number`
+   
+ * **Success Response:**
+
+  * **Code:** 200 SUCCESS <br />
+    **Content:** `{ error : null, message : "ID Number Validity Was Checked Successfully.", data : {isValid : boolean} }`
+    
+ * **Error Response:**
+
+  * **Code:** 422 UNPROCESSABLE ENTITY <br />
+    **Content:** `{ error : null, message : "id_number (String) Is A Required Parameter.", data : null }`
+    
+ ### Extract Info From Id
+----
+   - Extracts all Info (Birthdate, Birth Governerate, Gender, Serial, Check Digit) from a given valid national ID.
+* **URL**
+
+  - [/api/extract-info-from-id/]()
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+
+   **Required:**
+ 
+   requires URL query: `?id_number`
+   
+ * **Success Response:**
+
+  * **Code:** 200 SUCCESS <br />
+    **Content:** `{ error : null, message : "ID Number Validity Was Checked Successfully.", data : {"Birthdate" : String, "Birth Governorate" : String,
+    "Gender" : String, "Check Digit": String}`
+    
+ * **Error Response:**
+
+  * **Code:** 422 UNPROCESSABLE ENTITY <br />
+    **Content:** `{ error : null, message : "id_number (String) Is A Required Parameter.", data : null }`
+  * **Code:** 422 UNPROCESSABLE ENTITY <br />
+    **Content:** `{ error : null, message : "Invalid ID Number.", data : null }`
+ 
+ 
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install egyid-info-extractor.
