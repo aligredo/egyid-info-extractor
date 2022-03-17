@@ -4,8 +4,9 @@ A minimal API to extract info from Egyptian ID number.
 ## EndPoints 
 
 * [/api/is-valid-id-number/]() ___requires URL query "?id_number"___.
+  Checks if the given national ID number is valid or not. ___(Notice that a given ID is consider invalid if its date is invalid; i.e a day that doesn't exist like 29/02/2021 or a day that has not come yet like 03/08/3030 even if the given ID matches the format)__.
 * [/api/extract-info-from-id/]() ___requires URL query "?id_number"___.
-
+  Extracts all Info (Birthdate, Birth Governerate, Gender, Serial, Check Digit) from a given valid national ID.
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install egyid-info-extractor.
