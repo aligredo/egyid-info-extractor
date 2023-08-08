@@ -17,7 +17,7 @@ describe('EgyIDController', () => {
       const req = { query: { id_number: 'valid_id_number' } };
       const res = { status: jest.fn().mockReturnThis(), json: jest.fn() };
       extractInfoFromIDNumber(req, res);
-      expect(res.json).toHaveBeenCalledWith({ error: null, message: "ID Number Info Was Extracted Successfully.", data: { /* expected info */ } });
+      expect(res.json).toHaveBeenCalledWith({ error: null, message: "ID Number Info Was Extracted Successfully.", data: { /* real expected info */ } });
     });
 
     // Add more tests for different scenarios and edge cases
